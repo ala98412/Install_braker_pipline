@@ -107,23 +107,25 @@ cd ..
 echo 'Install finished.'
 
 # >>> Write Paths to ~/.bashrc >>>
-sed -i 's/# >>> Path of Braker >>>//g' /home/why/.bashrc
-sed -i "s|export DIAMOND_PATH=$diamond_path||g" /home/why/.bashrc
-sed -i "s|export AUGUSTUS_CONFIG_PATH=$Augustus_path||g" /home/why/.bashrc
-sed -i "s|export BAMTOOLS_PATH=$bamtools_path||g" /home/why/.bashrc
-sed -i "s|export PROTHINT_PATH=$prothint_path||g" /home/why/.bashrc
-sed -i "s|export CDBTOOLS_PATH=$cdbfasta_path||g" /home/why/.bashrc
-sed -i "s|export GENEMARK_PATH=$gmes_path||g" /home/why/.bashrc
-sed -i 's/# <<< Path of Braker <<<//g' /home/why/.bashrc
+cd
+path=$(pwd)
+sed -i 's/# >>> Path of Braker >>>//g' $path/.bashrc
+sed -i "s|export DIAMOND_PATH=$diamond_path||g" $path/.bashrc
+sed -i "s|export AUGUSTUS_CONFIG_PATH=$Augustus_path||g" $path/.bashrc
+sed -i "s|export BAMTOOLS_PATH=$bamtools_path||g" $path/.bashrc
+sed -i "s|export PROTHINT_PATH=$prothint_path||g" $path/.bashrc
+sed -i "s|export CDBTOOLS_PATH=$cdbfasta_path||g" $path/.bashrc
+sed -i "s|export GENEMARK_PATH=$gmes_path||g" $path/.bashrc
+sed -i 's/# <<< Path of Braker <<<//g' $path/.bashrc
 
-echo '# >>> Path of Braker >>>' >> /home/why/.bashrc
-echo "export DIAMOND_PATH=$diamond_path" >> /home/why/.bashrc
-echo "export AUGUSTUS_CONFIG_PATH=$Augustus_path" >> /home/why/.bashrc
-echo "export BAMTOOLS_PATH=$bamtools_path" >> /home/why/.bashrc
-echo "export PROTHINT_PATH=$prothint_path" >> /home/why/.bashrc
-echo "export CDBTOOLS_PATH=$cdbfasta_path" >> /home/why/.bashrc
-echo "export GENEMARK_PATH=$gmes_path" >> /home/why/.bashrc
-echo '# <<< Path of Braker <<<' >> /home/why/.bashrc
+echo '# >>> Path of Braker >>>' >> $path/.bashrc
+echo "export DIAMOND_PATH=$diamond_path" >> $path/.bashrc
+echo "export AUGUSTUS_CONFIG_PATH=$Augustus_path" >> $path/.bashrc
+echo "export BAMTOOLS_PATH=$bamtools_path" >> $path/.bashrc
+echo "export PROTHINT_PATH=$prothint_path" >> $path/.bashrc
+echo "export CDBTOOLS_PATH=$cdbfasta_path" >> $path/.bashrc
+echo "export GENEMARK_PATH=$gmes_path" >> $path/.bashrc
+echo '# <<< Path of Braker <<<' >> $path/.bashrc
 # <<< Write Paths to ~/.bashrc <<<
 
 echo 'Env variable added.'
