@@ -25,6 +25,7 @@ cpan install Scalar::Util::Numeric
 cpan install YAML
 cpan install Math::Utils
 cpan install threads
+cpan install File::HomeDir
 # <<< Install Modules <<<
 
 # <<< Install braker <<<
