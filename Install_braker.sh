@@ -110,6 +110,7 @@ echo 'Install finished.'
 # >>> Write Paths to ~/.bashrc >>>
 cd
 path=$(pwd)
+echo $path
 sed -i 's/# >>> Path of Braker >>>//g' $path/.bashrc
 sed -i "s|export DIAMOND_PATH=$diamond_path||g" $path/.bashrc
 sed -i "s|export AUGUSTUS_CONFIG_PATH=$Augustus_path||g" $path/.bashrc
