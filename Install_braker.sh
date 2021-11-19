@@ -45,13 +45,14 @@ rm gmes_urls.txt
 tar zxvf gmes_linux_64.tar.gz
 cd gmes_linux_64
 gmes_path=$(pwd)
+cp gm_key ~/.gm_key
 cd ..
 rm gmes_linux_64.tar.gz
 
-gunzip gm_key_64.gz
-mv gm_key_64 /home/
-cd /home/
-mv gm_key_64 .gm_key
+# gunzip gm_key_64.gz
+# mv gm_key_64 /home/
+# cd /home/
+# mv gm_key_64 .gm_key
 
 cd $now_path
 # <<< Install GeneMark-EX <<<
