@@ -147,6 +147,6 @@ echo "export PATH=$braker_path:$PATH" >> $path/.bashrc
 
 echo '# <<< Path of Braker <<<' >> $path/.bashrc
 # <<< Write Paths to ~/.bashrc <<<
-source ~/.bashrc
 
 echo 'Env variable added.'
+echo 'Please run the command: source ~/.bashrc'
