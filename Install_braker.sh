@@ -1,3 +1,4 @@
+#!/bin/bash
 
 now_path=$(pwd)
 
