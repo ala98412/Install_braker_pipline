@@ -5,7 +5,7 @@
 
 需要注意的是，有些braker需要的perl模組需要sudo權限。
 
-#Install
+# Install
 ```
 ./Install_braker.sh
 ```
