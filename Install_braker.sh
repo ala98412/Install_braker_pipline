@@ -113,8 +113,12 @@ git clone https://github.com/Gaius-Augustus/TSEBRA
 tsebra_path=$(realpath ./TSEBRA/bin/)
 # <<< TSEBRA <<<
 
+# >>> change mod >>>
+chmod -R 777 ./
+# <<< change mod <<<
 
 echo 'Install finished.'
+
 
 # >>> Write Paths to ~/.bashrc >>>
 cd
