@@ -31,6 +31,7 @@ cpan install File::HomeDir
 
 # <<< Install braker <<<
 git clone https://github.com/Gaius-Augustus/BRAKER.git
+braker_path=$(realpath ./BRAKER/scripts/)
 # >>> Install braker <<<
 
 # >>> Install GeneMark-EX >>>
@@ -107,6 +108,12 @@ make all
 cd ..
 # <<< Install cdbfasta <<<
 
+# >>> TSEBRA >>>
+git clone https://github.com/Gaius-Augustus/TSEBRA
+tsebra_path=$(realpath ./TSEBRA/bin/)
+# <<< TSEBRA <<<
+
+
 echo 'Install finished.'
 
 # >>> Write Paths to ~/.bashrc >>>
@@ -120,6 +127,8 @@ sed -i "s|export BAMTOOLS_PATH=$bamtools_path||g" $path/.bashrc
 sed -i "s|export PROTHINT_PATH=$prothint_path||g" $path/.bashrc
 sed -i "s|export CDBTOOLS_PATH=$cdbfasta_path||g" $path/.bashrc
 sed -i "s|export GENEMARK_PATH=$gmes_path||g" $path/.bashrc
+sed -i "s|export PATH=$tsebra_path:$PATH||g" $path/.bashrc
+sed -i "s|export PATH=$braker_path:$PATH||g" $path/.bashrc
 sed -i 's/# <<< Path of Braker <<<//g' $path/.bashrc
 
 echo '# >>> Path of Braker >>>' >> $path/.bashrc
@@ -129,7 +138,11 @@ echo "export BAMTOOLS_PATH=$bamtools_path" >> $path/.bashrc
 echo "export PROTHINT_PATH=$prothint_path" >> $path/.bashrc
 echo "export CDBTOOLS_PATH=$cdbfasta_path" >> $path/.bashrc
 echo "export GENEMARK_PATH=$gmes_path" >> $path/.bashrc
+echo "export PATH=$tsebra_path:$PATH" >> $path/.bashrc
+echo "export PATH=$braker_path:$PATH" >> $path/.bashrc
+
 echo '# <<< Path of Braker <<<' >> $path/.bashrc
 # <<< Write Paths to ~/.bashrc <<<
+source ~/.bashrc
 
 echo 'Env variable added.'
