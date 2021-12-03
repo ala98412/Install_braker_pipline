@@ -7,5 +7,6 @@
 
 # Install
 ```
+chmod +x ./Install_braker.sh
 ./Install_braker.sh
 ```
