@@ -9,4 +9,5 @@
 ```
 chmod +x ./Install_braker.sh
 sudo ./Install_braker.sh
+source ~/.bashrc
 ```
